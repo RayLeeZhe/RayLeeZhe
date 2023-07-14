@@ -137,7 +137,7 @@ class App{
                 
                 self.loadingBar.visible = false;
 
-                 loader.load(
+                loader.load(
                     'trandafir_-_weaponcraft_2023.glb',
                     function(gltf){
                     const weaponcraft = gltf.scene;
@@ -153,6 +153,7 @@ class App{
                         console.log('An error has occurred.')
                     }
                   );
+
 
                 self.setupXR();
 			},
