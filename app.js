@@ -29,7 +29,7 @@ class App{
 		this.scene = new THREE.Scene();
         this.scene.add( this.dolly );
         
-		const ambient = new THREE.HemisphereLight(0xFFA07A, 0x#9FE2BF, 0.5);
+		const ambient = new THREE.HemisphereLight(0xFFFFFF, 0x9FE2BF, 0.5);
 		this.scene.add(ambient);
 
 		this.renderer = new THREE.WebGLRenderer({ antialias: true });
@@ -141,7 +141,7 @@ class App{
                     'trandafir_-_weaponcraft_2023.glb',
                     function(gltf){
                     const weaponcraft = gltf.scene;
-                    weaponcraft.position.set(2,-15,-1300);
+                    weaponcraft.position.set(1,-10,-1200);
                     weaponcraft.rotation.x = Math.PI;
                     weaponcraft.rotation.y = Math.PI;
                     weaponcraft.scale.set(0.25,0.25,0.25);
@@ -152,7 +152,7 @@ class App{
                     function(error){
                         console.log('An error has occurred.')
                     }
-                );
+                  );
 
                 self.setupXR();
 			},
@@ -255,7 +255,7 @@ class App{
         if (this.proxy === undefined) return;
         
         const wallLimit = 1.5;
-        const speed = 1.5;
+        const speed = 1.0;
 		let pos = this.dolly.position.clone();
         pos.y += 1;
         
