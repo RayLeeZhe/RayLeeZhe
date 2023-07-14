@@ -137,24 +137,6 @@ class App{
                 
                 self.loadingBar.visible = false;
 
-                loader.load(
-                    'trandafir_-_weaponcraft_2023.glb',
-                    function(gltf){
-                    const weaponcraft = gltf.scene;
-                    weaponcraft.position.set(1,-10,-1200);
-                    weaponcraft.rotation.x = Math.PI;
-                    weaponcraft.rotation.y = Math.PI;
-                    weaponcraft.scale.set(0.25,0.25,0.25);
-
-                    college.add(weaponcraft);
-                    },
-                    undefined,
-                    function(error){
-                        console.log('An error has occurred.')
-                    }
-                  );
-
-
                 self.setupXR();
 			},
 			// called while loading is progressing
