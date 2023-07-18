@@ -107,8 +107,8 @@ class App{
 			// called when the resource is loaded
 			function ( gltf ) {
 
-                const college = gltf.scene.children[0];
-				self.scene.add( college );
+                const college = gltf.scene.children[0];// blender part punya
+				self.scene.add( college );// website one
 				
 				college.traverse(function (child) {
     				if (child.isMesh){
@@ -116,8 +116,8 @@ class App{
 							child.material.visible = false;
 							self.proxy = child;
 						}else if (child.material.name.indexOf('Glass')!=-1){
-                            child.material.opacity = 0.1;
-                            child.material.transparent = true;
+                           // child.material.opacity = 0.1;
+                            //child.material.transparent = true;
                         }else if (child.material.name.indexOf("SkyBox")!=-1){
                             const mat1 = child.material;
                             const mat2 = new THREE.MeshBasicMaterial({map: mat1.map});
